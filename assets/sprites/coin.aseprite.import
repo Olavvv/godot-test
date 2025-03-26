@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://btadq1xmb3rru"
+path="res://.godot/imported/coin.aseprite-0d93172f35c68bbdfca7f5541730f9ac.res"
+
+[deps]
+
+source_file="res://assets/sprites/coin.aseprite"
+dest_files=["res://.godot/imported/coin.aseprite-0d93172f35c68bbdfca7f5541730f9ac.res"]
+
+[params]
+
