@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://ds3hvyml8otls"
+path="res://.godot/imported/hamster.aseprite-7c098f5850977b2ece35edd7839c5c53.res"
+
+[deps]
+
+source_file="res://assets/sprites/characters/hamster.aseprite"
+dest_files=["res://.godot/imported/hamster.aseprite-7c098f5850977b2ece35edd7839c5c53.res"]
+
+[params]
+

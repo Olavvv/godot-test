@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=4 uid="uid://b38kntl7cgb87"]
 
 [ext_resource type="Script" uid="uid://dv3k5v3w0o22" path="res://scripts/sign.gd" id="1_kd50q"]
-[ext_resource type="PackedScene" uid="uid://bc7wssingld20" path="res://scenes/InteractionArea.tscn" id="2_kd50q"]
+[ext_resource type="PackedScene" uid="uid://bc7wssingld20" path="res://scenes/interactables/InteractionArea.tscn" id="2_kd50q"]
 
 [sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_0tk13"]
 _data = PackedByteArray("AAADAAUAAAABAAAAEAAAABAAAABeAAAAUklGRlYAAABXRUJQVlA4TEoAAAAvD8ADEBcgEEjyp9hrMbFgMn+9rmwEAkm0m+8x/wHdG1hFktSKtL6QEMcEavhCQvL5goWI/k+A+ZxAo18lUFpXCTTWVIIHE635Bw==")

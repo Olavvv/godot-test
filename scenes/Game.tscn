@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=4 uid="uid://bbyh0tvvi654x"]
 
-[ext_resource type="PackedScene" uid="uid://c822lkyphiiys" path="res://scenes/player.tscn" id="1_qbsmt"]
-[ext_resource type="PackedScene" uid="uid://b2rkucsib34wx" path="res://scenes/coin.tscn" id="2_78awf"]
-[ext_resource type="PackedScene" uid="uid://b38kntl7cgb87" path="res://scenes/sign.tscn" id="3_78awf"]
+[ext_resource type="PackedScene" uid="uid://djwfalhgu7yaw" path="res://scenes/playable_characters/player_ninja.tscn" id="1_78awf"]
+[ext_resource type="PackedScene" uid="uid://b2rkucsib34wx" path="res://scenes/collectables/coin.tscn" id="2_78awf"]
+[ext_resource type="PackedScene" uid="uid://b38kntl7cgb87" path="res://scenes/interactables/sign.tscn" id="3_78awf"]
 [ext_resource type="Texture2D" uid="uid://ni0blgb6cr7e" path="res://assets/sprites/tilemap_test.aseprite" id="3_cpr0p"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cpr0p"]
@@ -66,8 +66,8 @@ sources/0 = SubResource("TileSetAtlasSource_78awf")
 
 [node name="Game" type="Node2D"]
 
-[node name="Player" parent="." instance=ExtResource("1_qbsmt")]
-position = Vector2(632, 450)
+[node name="Player" parent="." instance=ExtResource("1_78awf")]
+position = Vector2(621, 440)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(6.895, 6.895)
