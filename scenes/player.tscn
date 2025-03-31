@@ -6,6 +6,10 @@
 _data = PackedByteArray("AAADAAUAAAABAAAAYAAAAGAAAADYAgAAUklGRtACAABXRUJQVlA4TMQCAAAvX8AXEF+gppEU6A7wrwY5dFh4O2woDQA0wSoHczCZqBM1jaRAKwvLyMABPQYwQPUKCIr8Hy0AAPD/l+nulNLQ0VwSgMzlIFVmQY607XHb/Mi+h5928QDufQTPYFh7A3rMCJ/adG6dS6j3UqlSuu12AvCDQpWkiug/BLeNHEmqzelYc/MK+Xcb1B0n1CHNuRnteHeQnwf5A4V15dIQpu4oqrqv6CNJ+rkZ6Vip7nciXaR3ji6SR9gYxzvVfZ8iEyzyLBBSdVTd30Xkjo6eJBeBOzPGsay6t8fInEZTdYxyBx9ZzkJGOXR3FpUgVccod0eNYeqOujsVOGw42A1ppO4Y5RZc2HwWIlXHCHc2D8imh1QdI9xFe/Px6N/3mkMOuqPP3HsUdTB/kl9zHKs4fsh95vifNZ1Ih+60TKVzg3mEOWmRaSXQk7s3p1xBzLU9OkcGUr2p7YgrR88IhUGeHYMGO1cvgIskA3cmz8UMQlMuDcerOVAu7UgX0yJvimPCrIXyyJGkX5jMceXdcagscumci8wqGKR3nJDrrMjCxUVWSGpPkhkreOeiJ1HAL0lGMrI4rog+X3LIWFeRxZ5FgcqYDMb80eYZJjG0NYjUN7qy/LAU2ed9KjAyUj1MW8Z8D7vIYuYeZgBSW188yv5rCmSwNu1dLEJaK5JvrWWkdFnaGR72yp7DZgbJJ+TZzVDUBdJaGAEkz3Ow5qDEytoiWNgZ5KNyjpO0EJUxbGyxdnGi9Q9GP+nDBXqtMFgLGHmAgnvo9TrgQUuAHiIfpVNlRmqDinvfpxpOB8h/1kHzqwOMdA2vkc7NAdOsK9LRuzht1R2POZILNGqbP3bRz02bQoo+kpw3ykdmcxbY5q7zTHkuAtGmQGV2plG2bCFt7uwxm11No3pcWGtJolX7vgOs3SzanbgQ+YiHYKThHEQe+qKWX/8rHwE=")
 size_override = Vector2(96, 96)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_fjrip"]
+atlas = SubResource("PortableCompressedTexture2D_u8vuu")
+region = Rect2(0, 64, 32, 32)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_3vyb7"]
 atlas = SubResource("PortableCompressedTexture2D_u8vuu")
 region = Rect2(0, 0, 32, 32)
@@ -30,12 +34,16 @@ region = Rect2(32, 32, 32, 32)
 atlas = SubResource("PortableCompressedTexture2D_u8vuu")
 region = Rect2(64, 32, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_fjrip"]
-atlas = SubResource("PortableCompressedTexture2D_u8vuu")
-region = Rect2(0, 64, 32, 32)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_smehm"]
 animations = [{
+"frames": [{
+"duration": 1.20482,
+"texture": SubResource("AtlasTexture_fjrip")
+}],
+"loop": false,
+"name": &"Falling",
+"speed": 13.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_3vyb7")
@@ -61,18 +69,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.20482,
-"texture": SubResource("AtlasTexture_qhqgy")
-}, {
-"duration": 1.20482,
-"texture": SubResource("AtlasTexture_qhqgy")
-}, {
-"duration": 1.20482,
-"texture": SubResource("AtlasTexture_qhqgy")
-}, {
-"duration": 1.20482,
-"texture": SubResource("AtlasTexture_g2els")
-}, {
-"duration": 1.20482,
 "texture": SubResource("AtlasTexture_dqkch")
 }, {
 "duration": 1.20482,
@@ -86,12 +82,23 @@ animations = [{
 }, {
 "duration": 1.20482,
 "texture": SubResource("AtlasTexture_fjrip")
+}],
+"loop": false,
+"name": &"Jump",
+"speed": 13.0
 }, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_qhqgy")
+"frames": [{
+"duration": 1.20482,
+"texture": SubResource("AtlasTexture_dqkch")
+}, {
+"duration": 1.20482,
+"texture": SubResource("AtlasTexture_qlg0r")
+}, {
+"duration": 1.20482,
+"texture": SubResource("AtlasTexture_tuyoq")
 }],
 "loop": true,
-"name": &"Jump",
+"name": &"Rising",
 "speed": 13.0
 }, {
 "frames": [{
@@ -123,9 +130,8 @@ script = ExtResource("1_3vyb7")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_smehm")
-animation = &"Idle"
+animation = &"Jump"
 autoplay = "Idle"
-frame_progress = 0.410063
 metadata/_aseprite_wizard_interface_config_ = {
 "animation_section": true,
 "layer_section": true,
