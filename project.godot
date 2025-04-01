@@ -11,13 +11,9 @@ config_version=5
 [application]
 
 config/name="godot-test"
-run/main_scene="uid://bbyh0tvvi654x"
+run/main_scene="uid://dystmbwayje57"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
-
-[autoload]
-
-InteractionManager="*res://scenes/interactables/InteractionManager.tscn"
 
 [editor_plugins]
 
@@ -40,6 +36,7 @@ sprint={
 
 2d_physics/layer_1="Mid"
 2d_physics/layer_2="Player"
+2d_physics/layer_10="interactions"
 
 [rendering]
 

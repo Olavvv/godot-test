@@ -1,39 +1,22 @@
-[gd_scene load_steps=5 format=4 uid="uid://b38kntl7cgb87"]
+[gd_scene load_steps=6 format=3 uid="uid://m5kjv757erln"]
 
-[ext_resource type="Script" uid="uid://dv3k5v3w0o22" path="res://scripts/sign.gd" id="1_kd50q"]
-[ext_resource type="PackedScene" uid="uid://bc7wssingld20" path="res://scenes/interactables/InteractionArea.tscn" id="2_kd50q"]
+[ext_resource type="Script" uid="uid://7gfh07c4qy8j" path="res://scripts/interactables/sign.gd" id="1_1xjph"]
+[ext_resource type="Texture2D" uid="uid://dxgr4k8tdkx46" path="res://assets/sprites/interactables/sign.png" id="1_vxikp"]
+[ext_resource type="PackedScene" uid="uid://bmsm67sia7h13" path="res://scenes/interaction_components/interactable.tscn" id="2_twgyp"]
+[ext_resource type="LabelSettings" uid="uid://xlvr8k4p4wxu" path="res://assets/label_settings/default_label_style.tres" id="4_1xjph"]
 
-[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_0tk13"]
-_data = PackedByteArray("AAADAAUAAAABAAAAEAAAABAAAABeAAAAUklGRlYAAABXRUJQVlA4TEoAAAAvD8ADEBcgEEjyp9hrMbFgMn+9rmwEAkm0m+8x/wHdG1hFktSKtL6QEMcEavhCQvL5goWI/k+A+ZxAo18lUFpXCTTWVIIHE635Bw==")
-size_override = Vector2(16, 16)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ge2pc"]
-size = Vector2(42, 18)
+[sub_resource type="CircleShape2D" id="CircleShape2D_twgyp"]
+radius = 14.0
 
 [node name="Sign" type="Node2D"]
-script = ExtResource("1_kd50q")
-
-[node name="Label" type="Label" parent="."]
-light_mask = 0
-visibility_layer = 2
-offset_left = -8.0
-offset_top = -14.0
-offset_right = 304.0
-offset_bottom = 123.0
-scale = Vector2(0.05, 0.05)
-theme_override_font_sizes/font_size = 100
-text = "Fuck u"
-metadata/_edit_use_anchors_ = true
+script = ExtResource("1_1xjph")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture_filter = 1
-texture = SubResource("PortableCompressedTexture2D_0tk13")
+texture = ExtResource("1_vxikp")
 metadata/_aseprite_wizard_interface_config_ = {
-"pending_changes": {}
-}
-metadata/_aseprite_wizard_config_ = {
+"pending_changes": {
 "embed_tex": true,
-"i_mode": 1,
+"i_mode": 0,
 "keep_anim_length": false,
 "layers": [],
 "o_ex_p": "",
@@ -42,13 +25,19 @@ metadata/_aseprite_wizard_config_ = {
 "only_visible": false,
 "player": "",
 "slice": "",
-"source": "res://assets/sprites/sign.aseprite"
+"source": "res://assets/sprites/interactables/sign.aseprite"
 }
-metadata/_aseprite_wizard_source_file_hash_ = "ef420e47c698c4aef09ba225e23bde55"
+}
 
-[node name="InteractionArea" parent="." instance=ExtResource("2_kd50q")]
+[node name="Interactable" parent="." instance=ExtResource("2_twgyp")]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
-visible = false
-position = Vector2(0, -1)
-shape = SubResource("RectangleShape2D_ge2pc")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable"]
+shape = SubResource("CircleShape2D_twgyp")
+
+[node name="SignLabel" type="Label" parent="."]
+offset_left = -39.0
+offset_top = -23.0
+offset_right = 39.0
+label_settings = ExtResource("4_1xjph")
+horizontal_alignment = 1
+vertical_alignment = 1

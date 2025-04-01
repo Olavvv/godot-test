@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dystmbwayje57"]
 
-[ext_resource type="Script" uid="uid://cymjlsr0nlicx" path="res://scripts/menu.gd" id="1_63g1t"]
+[ext_resource type="Script" uid="uid://cymjlsr0nlicx" path="res://scripts/menus/menu.gd" id="1_63g1t"]
 [ext_resource type="FontFile" uid="uid://d03qpdmp2vhix" path="res://assets/fonts/PixelOperator8.ttf" id="2_65ltr"]
 
 [node name="Menu" type="Control"]

@@ -1,17 +1,83 @@
-[gd_scene load_steps=3 format=4 uid="uid://dhyem828jdsxx"]
+[gd_scene load_steps=15 format=4 uid="uid://d2y6oa5cpd56l"]
 
-[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_n4pas"]
+[ext_resource type="Script" uid="uid://mxc3htgs14he" path="res://scripts/interactables/button.gd" id="1_p01m6"]
+[ext_resource type="PackedScene" uid="uid://bmsm67sia7h13" path="res://scenes/interaction_components/interactable.tscn" id="1_vt354"]
+[ext_resource type="AudioStream" uid="uid://bqso3ahhjpqkp" path="res://assets/soundfx/explosion-sound-effect.mp3" id="2_nyiw5"]
+
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_gd0ax"]
 _data = PackedByteArray("AAADAAUAAAABAAAAEAAAABAAAABcAAAAUklGRlQAAABXRUJQVlA4TEgAAAAvD8ADECdAmG2c23soQzuJI8w2zu07gtEc0BFp2wxPz1Sd3//8B2DfyncqmIpk440G18C8CvQvxxcFIvo/AbpcvaQdQ7YmwCc=")
 size_override = Vector2(16, 16)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_n4pas"]
-size = Vector2(6, 9)
+[sub_resource type="CircleShape2D" id="CircleShape2D_twgyp"]
+radius = 14.0
 
-[node name="Button" type="Area2D"]
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_p01m6"]
+_data = PackedByteArray("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")
+size_override = Vector2(192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nac6j"]
+atlas = SubResource("PortableCompressedTexture2D_p01m6")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_etagj"]
+atlas = SubResource("PortableCompressedTexture2D_p01m6")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3o43r"]
+atlas = SubResource("PortableCompressedTexture2D_p01m6")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x5mb7"]
+atlas = SubResource("PortableCompressedTexture2D_p01m6")
+region = Rect2(0, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6djvu"]
+atlas = SubResource("PortableCompressedTexture2D_p01m6")
+region = Rect2(64, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fgi0t"]
+atlas = SubResource("PortableCompressedTexture2D_p01m6")
+region = Rect2(128, 64, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bfmnn"]
+atlas = SubResource("PortableCompressedTexture2D_p01m6")
+region = Rect2(0, 128, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_anirt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nac6j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_etagj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3o43r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x5mb7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6djvu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fgi0t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bfmnn")
+}],
+"loop": false,
+"name": &"default",
+"speed": 13.0
+}]
+
+[node name="Button" type="Node2D"]
+script = ExtResource("1_p01m6")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-texture = SubResource("PortableCompressedTexture2D_n4pas")
+texture = SubResource("PortableCompressedTexture2D_gd0ax")
 metadata/_aseprite_wizard_interface_config_ = {
 "pending_changes": {}
 }
@@ -26,10 +92,37 @@ metadata/_aseprite_wizard_config_ = {
 "only_visible": false,
 "player": "",
 "slice": "",
-"source": "res://assets/sprites/button.aseprite"
+"source": "res://assets/sprites/interactables/button.aseprite"
 }
 metadata/_aseprite_wizard_source_file_hash_ = "3d133dab148c63c5ff7ecab7c0c1a71f"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 2.5)
-shape = SubResource("RectangleShape2D_n4pas")
+[node name="Interactable" parent="." instance=ExtResource("1_vt354")]
+interact_name = "Press Button"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable"]
+shape = SubResource("CircleShape2D_twgyp")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_nyiw5")
+volume_db = -12.24
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_anirt")
+frame_progress = 0.185884
+metadata/_aseprite_wizard_interface_config_ = {
+"animation_section": false,
+"pending_changes": {}
+}
+metadata/_aseprite_wizard_config_ = {
+"embed_tex": true,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"should_round_fps": true,
+"slice": "",
+"source": "res://assets/sprites/sfx/Explotion (BAD).aseprite"
+}
+metadata/_aseprite_wizard_source_file_hash_ = "a000bebca63db0c094b37e3b9b101e84"

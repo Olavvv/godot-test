@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dcy17xqbtsogm"]
 
-[ext_resource type="Script" uid="uid://byqgbq6ccgjxk" path="res://scripts/in_game_menu.gd" id="1_j7b2m"]
+[ext_resource type="Script" uid="uid://byqgbq6ccgjxk" path="res://scripts/menus/in_game_menu.gd" id="1_j7b2m"]
 [ext_resource type="FontFile" uid="uid://d03qpdmp2vhix" path="res://assets/fonts/PixelOperator8.ttf" id="1_s348h"]
 
 [node name="InGameMenu" type="Control"]
@@ -33,7 +33,7 @@ alignment = 1
 layout_mode = 2
 theme_override_fonts/font = ExtResource("1_s348h")
 theme_override_font_sizes/font_size = 48
-text = "Resume"
+text = "Resume (FUNKER IKKE)"
 
 [node name="BackToMMButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2

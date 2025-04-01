@@ -1,6 +1,7 @@
-[gd_scene load_steps=12 format=4 uid="uid://c822lkyphiiys"]
+[gd_scene load_steps=13 format=4 uid="uid://c822lkyphiiys"]
 
-[ext_resource type="Script" uid="uid://dmx6exvi0mvlc" path="res://scripts/player.gd" id="1_3vyb7"]
+[ext_resource type="Script" uid="uid://dmx6exvi0mvlc" path="res://scripts/main/player.gd" id="1_3vyb7"]
+[ext_resource type="PackedScene" uid="uid://c4yfvws1htrny" path="res://scenes/interaction_components/interacting_component.tscn" id="2_41aa5"]
 
 [sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_u8vuu"]
 _data = PackedByteArray("AAADAAUAAAABAAAAYAAAAGAAAADYAgAAUklGRtACAABXRUJQVlA4TMQCAAAvX8AXEF+gppEU6A7wrwY5dFh4O2woDQA0wSoHczCZqBM1jaRAKwvLyMABPQYwQPUKCIr8Hy0AAPD/l+nulNLQ0VwSgMzlIFVmQY607XHb/Mi+h5928QDufQTPYFh7A3rMCJ/adG6dS6j3UqlSuu12AvCDQpWkiug/BLeNHEmqzelYc/MK+Xcb1B0n1CHNuRnteHeQnwf5A4V15dIQpu4oqrqv6CNJ+rkZ6Vip7nciXaR3ji6SR9gYxzvVfZ8iEyzyLBBSdVTd30Xkjo6eJBeBOzPGsay6t8fInEZTdYxyBx9ZzkJGOXR3FpUgVccod0eNYeqOujsVOGw42A1ppO4Y5RZc2HwWIlXHCHc2D8imh1QdI9xFe/Px6N/3mkMOuqPP3HsUdTB/kl9zHKs4fsh95vifNZ1Ih+60TKVzg3mEOWmRaSXQk7s3p1xBzLU9OkcGUr2p7YgrR88IhUGeHYMGO1cvgIskA3cmz8UMQlMuDcerOVAu7UgX0yJvimPCrIXyyJGkX5jMceXdcagscumci8wqGKR3nJDrrMjCxUVWSGpPkhkreOeiJ1HAL0lGMrI4rog+X3LIWFeRxZ5FgcqYDMb80eYZJjG0NYjUN7qy/LAU2ed9KjAyUj1MW8Z8D7vIYuYeZgBSW188yv5rCmSwNu1dLEJaK5JvrWWkdFnaGR72yp7DZgbJJ+TZzVDUBdJaGAEkz3Ow5qDEytoiWNgZ5KNyjpO0EJUxbGyxdnGi9Q9GP+nDBXqtMFgLGHmAgnvo9TrgQUuAHiIfpVNlRmqDinvfpxpOB8h/1kHzqwOMdA2vkc7NAdOsK9LRuzht1R2POZILNGqbP3bRz02bQoo+kpw3ykdmcxbY5q7zTHkuAtGmQGV2plG2bCFt7uwxm11No3pcWGtJolX7vgOs3SzanbgQ+YiHYKThHEQe+qKWX/8rHwE=")
@@ -153,5 +154,8 @@ metadata/_aseprite_wizard_config_ = {
 metadata/_aseprite_wizard_source_file_hash_ = "4215a77ed5cabb12b0eefb94845885d2"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, -1)
+position = Vector2(0, -1)
 shape = SubResource("CircleShape2D_u8vuu")
+debug_color = Color(1, 1, 1, 0.811765)
+
+[node name="InteractingComponent" parent="." instance=ExtResource("2_41aa5")]

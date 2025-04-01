@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://baljv2kfl42jk"]
 
-[ext_resource type="Script" uid="uid://cw5kc4pcva8re" path="res://scripts/char_select_menu.gd" id="1_b3xlu"]
+[ext_resource type="Script" uid="uid://cw5kc4pcva8re" path="res://scripts/menus/char_select_menu.gd" id="1_b3xlu"]
 [ext_resource type="FontFile" uid="uid://d03qpdmp2vhix" path="res://assets/fonts/PixelOperator8.ttf" id="1_jwa28"]
 [ext_resource type="Texture2D" uid="uid://ek18sarl0dl2" path="res://assets/sprites/characters/Ninja_icon.png" id="2_lnhdt"]
 [ext_resource type="Texture2D" uid="uid://dqxfx2383wphr" path="res://assets/sprites/characters/hamster_icon.png" id="3_db1cg"]

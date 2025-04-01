@@ -1,0 +1,10 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://xlvr8k4p4wxu"]
+
+[ext_resource type="FontFile" uid="uid://d03qpdmp2vhix" path="res://assets/fonts/PixelOperator8.ttf" id="1_dnsou"]
+
+[resource]
+font = ExtResource("1_dnsou")
+font_size = 8
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+shadow_color = Color(0, 0, 0, 0.588235)

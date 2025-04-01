@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=4 uid="uid://b2rkucsib34wx"]
 
-[ext_resource type="Script" uid="uid://clbohokjuxyid" path="res://scripts/coin.gd" id="1_rwqht"]
+[ext_resource type="Script" uid="uid://clbohokjuxyid" path="res://scripts/collectables/coin.gd" id="1_rwqht"]
 
 [sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_kahox"]
 _data = PackedByteArray("AAADAAUAAAABAAAAMAAAADAAAADgAAAAUklGRtgAAABXRUJQVlA4TMwAAAAvL8ALEDegqI0UaE//HtEAb2woaNuG6dnlD3UApqZtI6hzx++OP8KDcPMfAAD4/w5rjxoye+Cott24sRhISVsADQLnHwtBGHTYj+LPofKUYR/Rf7Vt2zD0nvpF6AiLUN7AEXEiMJYbMEC+0gRq6RJh13n8d/nMoKIbJnWSer8c9u2FZYFzS97NYQUqd3vlDcwu5QZsSu1/2VmYWhvEsbEBA1Sfo9OnTg9gm0LhdQnVBh1/2VlE6gpt20RgXNvzqG6p0QtoxKbU/pcdJAA=")
